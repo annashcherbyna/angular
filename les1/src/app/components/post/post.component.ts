@@ -13,9 +13,8 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   showComment(postId: number): void{
-    // CommentsService.getCommentsByPostId(postId)
-    //   .subscribe(value => console.log(value));
-    console.log(postId);
+     CommentsService.getCommentsByPostId(postId)
+     .subscribe(value => console.log(value));
   }
   ngOnInit(): void {
   }
