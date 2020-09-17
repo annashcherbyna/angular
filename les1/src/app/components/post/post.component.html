@@ -1,0 +1,8 @@
+<div>
+  <h4>#{{post.id}} user: {{post.userId}} </h4>
+  <b>{{post.title}}</b>
+  <p>
+    {{post.body}}
+  </p>
+  <button (click)="showComment(post.id)">Show comments</button>
+</div>
