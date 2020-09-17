@@ -10,12 +10,14 @@ import {CommentsService} from '../../services/comments.service';
 export class PostComponent implements OnInit {
   @Input()
   post: Post;
-  constructor() { }
+
+  constructor(private commentsService: CommentsService) { }
 
   showComment(postId: number): void{
-    // CommentsService.getCommentsByPostId(postId)
-    //   .subscribe(value => console.log(value));
     console.log(postId);
+
+    this.commentsService.getCommentsByPostId(postId)
+       .subscribe(value => console.log(value));
   }
   ngOnInit(): void {
   }
