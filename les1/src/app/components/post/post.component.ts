@@ -14,8 +14,6 @@ export class PostComponent implements OnInit {
   constructor(private commentsService: CommentsService) { }
 
   showComment(postId: number): void{
-    console.log(postId);
-
     this.commentsService.getCommentsByPostId(postId)
        .subscribe(value => console.log(value));
   }
